@@ -17,14 +17,18 @@ export default function Sidebar() {
   return (
     <aside className="hidden md:flex flex-col w-64 border-r border-gray-800 bg-gray-900 p-6 gap-2 fixed h-screen z-10">
       
-      <div className="flex items-center gap-3 mb-8">
-        <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-white">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-          </svg>
+      <Link 
+        href="/home" 
+        className="flex items-center gap-3 mb-8 group"
+      >
+        <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-violet-200/70 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="relative z-10 w-5 h-5 text-white">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
         </div>
-        <h1 className="text-xl font-bold text-white">SonoZen</h1>
-      </div>
+        <h1 className="text-xl font-bold text-white group-hover:opacity-90 transition-opacity">SonoZen</h1>
+      </Link>
 
       <nav className="flex flex-col gap-1 flex-1">
         
@@ -44,7 +48,7 @@ export default function Sidebar() {
           <span>Diagnóstico</span>
         </Link>
 
-        <Link href="/rotine" className={getLinkClass("/rotina")}>
+        {/* <Link href="/rotine" className={getLinkClass("/rotina")}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 shrink-0">
             <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
             <path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path>
@@ -66,7 +70,7 @@ export default function Sidebar() {
             <path d="M9 18h6"></path><path d="M10 22h4"></path>
           </svg>
           <span>Dicas</span>
-        </Link>
+        </Link> */}
 
         <Link href="/profile" className={getLinkClass("/profile")}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 shrink-0">
@@ -75,14 +79,14 @@ export default function Sidebar() {
           </svg>
           <span>Perfil</span>
         </Link>
-
+{/* 
         <Link href="/dashboard" className={getLinkClass("/dashboard")}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 shrink-0">
             <path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path>
           </svg>
           <span>Dashboard</span>
         </Link>
-        
+         */}
       </nav>
 
     </aside>
